@@ -1,0 +1,344 @@
+/*COLOR rgb(204,198,198) */
+@font-face {
+    font-family: chacha;
+    src: url(Abhaya\ Libre.ttf);
+    /* playwrite us trade */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: chacha;
+    
+
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(204,198,198); */
+}
+#main{
+    /* scroll-snap-type: y mandatory; */
+    /* overflow-y: scroll;     */
+    height: 100vh; 
+}
+#page1{
+    /* scroll-snap-align: start; */
+    width: 100%;
+    position: relative;
+    padding: 0 0.5vw;
+    margin: 0;
+    
+}
+nav{
+    padding: 1vw 1vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9;
+    padding-top: 1.5vw;
+}
+.logo{
+    padding-left: 1vw;
+    height: 2.8vw;
+    width: auto;
+}
+#nav-part2{
+    color: rgb(157,141,38);
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(157,141,38,0.9) ;
+    border-radius: 40px;
+    padding: 0.5vw 10vw;
+    font-weight: 1000;
+    font-size: 1.2vw;
+    margin-left: 7.5vw;
+}
+#nav-part3{
+    display: flex;
+    align-items: center;
+    gap: 1.0vw;
+    padding-right: 1vw;
+}
+#nav-part3 h4{
+    color: rgb(157,141,38);
+    padding: 0.5vw 1.5vw;
+    border: 1px solid rgba(157,141,38,0.9);
+    border-radius: 20px;
+    font-weight: 1000;
+    font-size: 1vw;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    
+}
+#nav-part3 h4 a{
+    text-decoration: none;
+    color: rgb(157,141,38);
+    position: relative;
+    z-index: 9;
+
+}
+#nav-part3 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(157,141,38,0.9);
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+#nav-part3 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#nav-part3 h4:hover a{
+    color:  rgb(202,215,231);
+}
+#header {
+    background-color: white;
+    padding-top : 4.5vw;
+    color: rgba(157,141,38,0.9);
+    justify-content: center;
+    text-align: center; 
+    font-weight: bold;
+    font-size: 6.5vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.8s;
+    z-index: 8;
+    /* box-shadow: 0 3vw 5vw #505050;  */
+}
+
+#page1 h3{
+    padding-top: 16vw; 
+    position: relative;
+    font-size: 2vw;
+    text-align: center;
+    border-bottom: 1px solid black;
+    color: rgba(157,141,38,0.9);
+}
+
+#select-container{
+
+    position: relative;
+    padding: 20px;
+    margin: 2vw auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#page2{
+    height: 40vw;
+    position: relative;
+    padding: 0 1.5vw;
+
+    margin-top: 1vw;
+}
+#video-container1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#left1 video{
+    height: 36vw;
+    width: auto;
+    opacity: 0.95;
+    box-shadow: 0 3vw 5vw #505050; /* Scaled shadow */
+}
+#right1 video{
+    height: 36vw;
+    width: auto;
+    opacity: 0.95;
+    box-shadow: 0 3vw 5vw #505050; /* Scaled shadow */
+}
+#page3{
+    scroll-snap-align: start;
+    width: 100%;
+    position: relative;
+    padding: 0 0.5vw;
+    overflow: hidden;
+} 
+#Food-Sections{
+    position: relative;
+    font-family: chacha;
+}
+#Food-Sections h2{
+    text-align: center;
+    font-size: 2.5vw;
+    color: rgba(157,141,38,0.9);
+    font-weight: 800;
+    border-bottom: 1px solid black;
+    margin: 3vw; 
+}
+.container{
+    margin: 5vw;
+    position: relative;
+    height: 40vw; 
+    background: #f5f5f5;
+    box-shadow: 0 3vw 5vw #dbdbdb; 
+}
+
+.container .slide .item {
+    width: 18vw;
+    aspect-ratio: 10/16;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%); 
+    border-radius: 2vw;
+    box-shadow: 0 3vw 5vw #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3) {
+    left: 70%;
+}
+
+.slide .item:nth-child(4) {
+    left: calc(70% + 22vw);
+}
+
+.slide .item:nth-child(5) {
+    left: calc(70% + 44vw); 
+}
+
+.slide .item:nth-child(n + 6) {
+    left: calc(70% + 66vw);     
+    opacity: 0; 
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 3vw;
+    width: 30vw; 
+    text-align: left;
+    color: #eee;
+    /* border: 1px solid #000; */
+    text-shadow: 2px solid black;
+    transform: translate(0, -50%); 
+    font-family: chacha;
+    display: none;
+}
+
+.slide .item:nth-child(2) .content {
+    display: block; 
+}
+
+.content .name {
+    font-size: 4vw; 
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    z-index: 2;
+    text-shadow: 1px 2px black;
+}
+
+.content .des {
+    margin-top: 1vw; 
+    margin-bottom: 2vw; 
+    opacity: 0;
+    text-shadow: 10px solid #000;;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    z-index: 2;
+    text-shadow: 1px 2px black;
+}
+
+.content button {
+    padding: 1vw 2vw; 
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 10vw);
+        filter: blur(3vw); 
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 35vw;
+    z-index: 1;    
+}
+
+.button button {
+    width: 4vw;
+    height: 3vw; 
+    border-radius: 0.8vw; 
+    border: none;
+    cursor: pointer;
+    /* margin: 0 0.5vw;  */
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+#footer{
+    position: relative;
+    text-align: center;
+    font-family: chacha;
+}
+#footer h6{
+    text-decoration: none;
+    
+}
+
+
+/* @media screen and (max-width: 768px) {
+    .container {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    .content {
+        left: 5vw;
+        width: 80vw;
+    }
+
+    .button button {
+        width: 10vw;
+        height: 6vw;
+    }
+} */
+
+
